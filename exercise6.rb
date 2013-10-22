@@ -13,4 +13,6 @@ class Grocery
 
 	@@grocery_list << "rice"
 	myList.printList
+
+	puts "no. of items = #{@@grocery_list.length}"
 end
