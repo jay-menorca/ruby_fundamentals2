@@ -23,6 +23,16 @@ class HashExercise
 		end
 	end
 
+	def calculateTotalStudentCount
+		countArr = @@students.values
+		totCount = 0
+		print "countArr: #{countArr}"
+		countArr.each do |val|
+			totCount = totCount + val
+		end
+		puts "Total student count to date is : #{totCount}"
+	end
+
 	he = HashExercise.new
 	he.printStudents
 
@@ -36,5 +46,12 @@ class HashExercise
 
 	he.increaseCohort(5)
 	he.printStudents
+
+	puts "\n Deleting 2nd cohort..."
+	@@students.delete(:cohort2)
+	he.printStudents
+
+	puts "\n Calculating total student count:"
+	he.calculateTotalStudentCount
 
 end
